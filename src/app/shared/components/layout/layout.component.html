@@ -1,0 +1,26 @@
+<div class="app-layout">
+  <!-- Panel Lateral (Sidebar) -->
+  <aside class="sidebar">
+    <div class="sidebar-brand">
+      <h2>FinApp</h2>
+    </div>
+    <nav class="sidebar-nav">
+      <a routerLink="/dashboard" routerLinkActive="active" class="nav-link">Dashboard</a>
+      <a routerLink="/accounts" routerLinkActive="active" class="nav-link">Cuentas</a>
+      <a routerLink="/income" routerLinkActive="active" class="nav-link">Ingresos</a>
+      <a routerLink="/expenses" routerLinkActive="active" class="nav-link">Gastos</a>
+    </nav>
+  </aside>
+
+  <!-- Contenido Principal -->
+  <div class="main-content">
+    <header class="topbar">
+      <div class="topbar-title">Mi Cartera Financiera</div>
+      <button class="btn-logout" (click)="logout()">Cerrar Sesión</button>
+    </header>
+    <main class="content-area">
+      <!-- Aquí se inyectarán el Dashboard, Cuentas, Ingresos, etc. -->
+      <router-outlet></router-outlet>
+    </main>
+  </div>
+</div>
